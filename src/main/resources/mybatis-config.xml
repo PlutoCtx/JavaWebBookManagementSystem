@@ -17,6 +17,7 @@
     </environments>
     <mappers>
         <!-- 加载映射文件 -->
-        <mapper resource="mapper/StudentMapper.xml"/>
+        <mapper resource="mapper/BookMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

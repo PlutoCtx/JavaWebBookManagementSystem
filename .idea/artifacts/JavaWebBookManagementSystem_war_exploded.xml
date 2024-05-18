@@ -10,6 +10,10 @@
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.30" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.30" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.11" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.11" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.4.11" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.4.11" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="JavaWebBookManagementSystem/web/Web" />

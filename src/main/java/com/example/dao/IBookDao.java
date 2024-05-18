@@ -1,6 +1,6 @@
-package org.example.dao;
+package com.example.dao;
 
-import org.example.entity.Book;
+import com.example.entity.Book;
 
 import java.util.List;
 
@@ -36,6 +36,7 @@ public interface IBookDao {
      * @return  修改的条数，为0表示修改失败
      */
     public int updateBookByBookId(Book book);
+
 
     /**
      * 返回数据库中所有的书籍

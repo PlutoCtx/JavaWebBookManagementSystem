@@ -1,4 +1,4 @@
-package org.example.util;
+package com.example.util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

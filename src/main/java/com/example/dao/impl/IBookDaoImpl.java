@@ -1,7 +1,9 @@
-package org.example.dao.impl;
+package com.example.dao.impl;
 
-import org.example.dao.IBookDao;
-import org.example.entity.Book;
+import com.example.entity.Book;
+import com.example.dao.IBookDao;
+import com.example.util.MyBatisUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
@@ -16,7 +18,14 @@ import java.util.List;
 
 public class IBookDaoImpl implements IBookDao {
 
+    private SqlSession openSession;
 
+
+
+    public IBookDaoImpl() {
+        super();
+        this.openSession = MyBatisUtil.getSqlSession();
+    }
 
 
     /**
@@ -57,7 +66,9 @@ public class IBookDaoImpl implements IBookDao {
      */
     @Override
     public List<Book> fetchAllBook() {
-        return List.of();
+
+        List<Book> bookList = openSession.selectList("fetchAllBook");
+        return bookList;
     }
 
 
