@@ -58,6 +58,9 @@ public class LoginServlet extends HttpServlet {
 
 
         if (userList.size() > 0) {
+            req.setAttribute("msg", "数据测试");
+            req.setAttribute("userList", userList);
+
             req.getRequestDispatcher("global/success.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("global/error.jsp").forward(req, resp);

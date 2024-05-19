@@ -5,32 +5,7 @@
   Time: 14:01
   To change this template use File | Settings | File Templates.
 --%>
-
-
-
-
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <title>Title</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--    <h1>Hello World!!!</h1>--%>
-
-
-
-<%--</body>--%>
-<%--</html>--%>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,30 +38,6 @@
     <script src="static/semantic/assets/library/jquery.min.js"></script>
     <script src="static/semantic/dist/components/form.js"></script>
     <script src="static/semantic/dist/components/transition.js"></script>
-
-
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/site.css">--%>
-
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/container.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/header.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/image.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">--%>
-
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/form.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/input.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/button.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/list.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/message.css">--%>
-<%--    <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">--%>
-
-<%--    <script src="assets/library/jquery.min.js"></script>--%>
-<%--    <script src="../dist/components/form.js"></script>--%>
-<%--    <script src="../dist/components/transition.js"></script>--%>
-
     <style type="text/css">
         body {
             background-color: #DADADA;
@@ -174,7 +125,7 @@
         </form>
 
         <div class="ui message">
-            没有账号请点击 <a href="#">注册</a>
+            没有账号请点击 <a href="register.jsp">注册</a>
         </div>
     </div>
 </div>
