@@ -62,6 +62,7 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("userList", userList);
 
             req.getRequestDispatcher("global/success.jsp").forward(req, resp);
+//            req.getRequestDispatcher("tableTest.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("global/error.jsp").forward(req, resp);
         }
