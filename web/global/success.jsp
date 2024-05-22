@@ -135,172 +135,59 @@
 
 
     <div class="ui container fixed">
-        <table class="ui celled padded table">
-            <thead>
-            <tr><th class="single line">Evidence Rating</th>
-                <th>Effect</th>
-                <th>Efficacy</th>
-                <th>Consensus</th>
-                <th>Comments</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td>
-                    <h2 class="ui center aligned header">A</h2>
-                </td>
-                <td class="single line">
-                    Power Output
-                </td>
-                <td>
-                    <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-                </td>
-                <td class="right aligned">
-                    80% <br>
-                    <a href="#">18 studies</a>
-                </td>
-                <td>Creatine supplementation is the reference compound for increasing muscular creatine levels; there is variability in this increase, however, with some nonresponders.</td>
-            </tr>
-            <tr>
-                <td>
-                    <h2 class="ui center aligned header">A</h2>
-                </td>
-                <td class="single line">
-                    Weight
-                </td>
-                <td>
-                    <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-                </td>
-                <td class="right aligned">
-                    100% <br>
-                    <a href="#">65 studies</a>
-                </td>
-                <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess potency</td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr><th colspan="5">
-                <div class="ui right floated pagination menu">
-                    <a class="icon item">
-                        <i class="left chevron icon"></i>
-                    </a>
-                    <a class="item">1</a>
-                    <a class="item">2</a>
-                    <a class="item">3</a>
-                    <a class="item">4</a>
-                    <a class="icon item">
-                        <i class="right chevron icon"></i>
-                    </a>
-                </div>
-            </th>
-            </tr></tfoot>
-        </table>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <table class="ui celled striped table">
-            <thead>
-            <tr><th colspan="3">
-                Git Repository
-            </th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td class="collapsing">
-                    <i class="folder icon"></i> node_modules
-                </td>
-                <td>Initial commit</td>
-                <td class="right aligned collapsing">10 hours ago</td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="folder icon"></i> test
-                </td>
-                <td>Initial commit</td>
-                <td class="right aligned">10 hours ago</td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="folder icon"></i> build
-                </td>
-                <td>Initial commit</td>
-                <td class="right aligned">10 hours ago</td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="file outline icon"></i> package.json
-                </td>
-                <td>Initial commit</td>
-                <td class="right aligned">10 hours ago</td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="file outline icon"></i> Gruntfile.js
-                </td>
-                <td>Initial commit</td>
-                <td class="right aligned">10 hours ago</td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
         <table class="ui compact celled definition table">
             <thead class="full-width">
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Registration Date</th>
-                <th>E-mail address</th>
-                <th>Premium Plan</th>
-            </tr>
+                <tr>
+                    <th></th>
+                    <th>id</th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>昵称</th>
+                    <th>邮箱</th>
+                    <th>电话</th>
+                    <th>权限</th>
+                    <th>最大借阅天数</th>
+                    <th>最大借阅书籍数</th>
+                </tr>
             </thead>
+
+            <%
+                List<User> userList = new ArrayList<>();
+                userList = (List<User>) request.getAttribute("userList");
+                if (userList == null) {
+                    IUserDaoImpl iUserDaoImpl;
+                    iUserDaoImpl = new IUserDaoImpl();
+                    userList = iUserDaoImpl.fetchAllUser();
+                }
+
+                for (User user : userList) {
+            %>
+
             <tbody>
+
             <tr>
                 <td class="collapsing">
                     <div class="ui fitted slider checkbox">
                         <input type="checkbox"> <label></label>
                     </div>
                 </td>
-                <td>John Lilki</td>
-                <td>September 14, 2013</td>
-                <td>jhlilk22@yahoo.com</td>
-                <td>No</td>
+                <td><%= user.getUserId() %></td>
+                <td><%= user.getUsername() %></td>
+                <td><%= user.getPassword() %></td>
+                <td><%= user.getNickname() %></td>
+                <td><%= user.getEmail() %></td>
+                <td><%= user.getPhone() %></td>
+                <td><%= user.getUserStatus() %></td>
+                <td><%= user.getLendDays() %></td>
+                <td><%= user.getMaxLendNumber() %></td>
             </tr>
-            <tr>
-                <td class="collapsing">
-                    <div class="ui fitted slider checkbox">
-                        <input type="checkbox"> <label></label>
-                    </div>
-                </td>
-                <td>Jamie Harington</td>
-                <td>January 11, 2014</td>
-                <td>jamieharingonton@yahoo.com</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td class="collapsing">
-                    <div class="ui fitted slider checkbox">
-                        <input type="checkbox"> <label></label>
-                    </div>
-                </td>
-                <td>Jill Lewis</td>
-                <td>May 11, 2014</td>
-                <td>jilsewris22@yahoo.com</td>
-                <td>Yes</td>
-            </tr>
+
             </tbody>
+            <% } %>
             <tfoot class="full-width">
             <tr>
                 <th></th>
-                <th colspan="4">
+                <th colspan="9">
                     <div class="ui right floated small primary labeled icon button">
                         <i class="user icon"></i> Add User
                     </div>
@@ -339,7 +226,7 @@
     <div class="ui vertical stripe segment">
 
         <div class="ui text container">
-            <table class="ui inverted red compact celled definition table">
+            <table class="ui compact celled definition table">
 
                 <thead class="full-width">
                     <tr>
@@ -356,7 +243,7 @@
                 </thead>
 
                 <%
-                    List<User> userList = new ArrayList<>();
+//                    List<User> userList = new ArrayList<>();
                     userList = (List<User>) request.getAttribute("userList");
                     if (userList == null) {
                         IUserDaoImpl iUserDaoImpl;
