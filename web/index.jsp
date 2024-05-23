@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Properties -->
-    <title>Login Example - Semantic</title>
+    <title>听弦图书借阅管理系统</title>
     <link rel="stylesheet" type="text/css" href="static/semantic/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="static/semantic/dist/components/reset.css">
     <link rel="stylesheet" type="text/css" href="static/semantic/dist/components/site.css">
@@ -121,7 +121,6 @@
             </div>
 
             <div class="ui error message"></div>
-
         </form>
 
         <div class="ui message">

@@ -271,14 +271,7 @@
             </div>
         </div>
 
-        <div class="ui vertical stripe segment">
-            <h1>注册界面</h1>
-            <a href="index.jsp">登录界面</a>
-            <br>
-            <h2>msg 的内容为</h2>
-            <br>
-            <%= request.getAttribute("msg")%>
-        </div>
+
 
 
         <div class="ui inverted vertical footer segment">
